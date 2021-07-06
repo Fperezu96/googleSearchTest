@@ -1,7 +1,11 @@
 Feature: Search by keyword
 
-  Scenario: Searching for a term
-    Given Sergey is researching things on the internet
-    When he looks up "Cucumber"
-    Then he should see information about "Cucumber"
+  Scenario Outline: A person is searching for a term
+    Given is researching things on the internet
+    When looks up <keywords>
+    Then should see information about
+    Examples:
+    |keywords|
+    |Hello Build|
+    |QA Engineer |
 
