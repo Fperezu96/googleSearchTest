@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:8-jdk
+       - image: circleci/openjdk:11.0.2-jdk-stretch-node-browsers-legacy
 
     working_directory: ~/repo
 
