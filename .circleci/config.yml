@@ -30,6 +30,7 @@ jobs:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
-
+      # solve mvn fork dependency
+      - run: mvn clean install -DforkCount=0 
       # run tests!
       - run: mvn clean verify
